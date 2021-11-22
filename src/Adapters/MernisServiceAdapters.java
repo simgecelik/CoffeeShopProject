@@ -9,7 +9,7 @@ import tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy;
 
 public class MernisServiceAdapters implements ICustomerCheckService {
 	public boolean result;
-	public boolean CheckIfRealPerson(Customer customer) {
+	public boolean checkIfRealPerson(Customer customer) {
 		KPSPublicSoapProxy kpsPublicSoapProxy = new KPSPublicSoapProxy();
 		try {
 			return result = kpsPublicSoapProxy.TCKimlikNoDogrula(Long.parseLong(customer.getNationalityId()), customer.getFirstName(), customer.getLastName(), customer.getDateOfBirth());
